@@ -47,9 +47,17 @@ def _to_int(value: str) -> int:
 
 
 def _normalise_date(value: str) -> str:
-    # Example input: "20 May 2026" -> "2026-05-20"
-    dt = datetime.strptime(value.strip(), "%d %B %Y")
-    return dt.date().isoformat()
+    # Example inputs:
+    # "20 May 2026" -> "2026-05-20"
+    # "20 May 2026" / "20 May 2026" with abbreviated month also supported, e.g. "20 May 2026"
+    value = value.strip()
+
+    for fmt in ("%d %B %Y", "%d %b %Y"):
+        try:
+            dt = datetime.strptime(value, fmt)
+            return dt.date().isoformat()
+        except ValueError:
+            continue
 
 
 def fetch_homepage_text() -> str:
