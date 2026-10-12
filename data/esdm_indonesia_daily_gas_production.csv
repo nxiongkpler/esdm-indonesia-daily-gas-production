@@ -92,3 +92,4 @@ date,indicator,actual,target,unit,source_url,fetched_at_utc
 2026-10-05,Gas Production,6096,5508,MMSCFD,https://www.esdm.go.id/en,2026-10-08T08:19:27+00:00
 2026-10-07,Gas Production,6542,5508,MMSCFD,https://www.esdm.go.id/en,2026-10-09T08:21:56+00:00
 2026-10-08,Gas Production,6591,5508,MMSCFD,https://www.esdm.go.id/en,2026-10-11T08:11:11+00:00
+2026-10-10,Gas Production,6615,5508,MMSCFD,https://www.esdm.go.id/en,2026-10-12T08:27:36+00:00
